@@ -205,7 +205,7 @@ NSString *keychainItemServiceName;
   SecAccessControlRef accessControlRef = SecAccessControlCreateWithFlags(
                                                                          kCFAllocatorDefault,
                                                                          kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
-                                                                         kSecAccessControlUserPresence,
+                                                                         kSecAccessControlBiometryCurrentSet,
                                                                          &accessControlError);
   if (accessControlRef == NULL || accessControlError != NULL)
   {
